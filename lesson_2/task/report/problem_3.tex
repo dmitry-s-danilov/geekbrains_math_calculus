@@ -1,0 +1,93 @@
+\section*{Задача 3}
+
+Проверить любым способ,
+являются ли данные логические формулы тавтологией:
+
+\begin{enumerate}
+  \item \((A \vee B) \Rightarrow (B \vee \neg A)\)
+  \item \(A \Rightarrow  (A \vee (\neg B \wedge A))\)
+\end{enumerate}
+
+\subsection*{Решение}
+
+\subsubsection*{1.1}
+
+\[(A \vee B) \Rightarrow (B \vee \neg A) \Leftrightarrow\]
+\[(A \vee B) \Rightarrow (\neg A \vee B) \Leftrightarrow\]
+\[\neg (A \vee B) \vee (\neg A \vee B) \Leftrightarrow\]
+\[(\neg (A \vee B) \vee \neg A) \vee B \Leftrightarrow\]
+\[\neg ((A \vee B) \wedge A) \vee B \Leftrightarrow\]
+\[\neg (A \wedge (A \vee B)) \vee B \Leftrightarrow\]
+\[(\neg A \vee B) \Leftrightarrow\]
+\[(A \Rightarrow B) \Leftrightarrow\]
+
+\[(A \vee B) \Rightarrow (B \vee \neg A) \Leftrightarrow (A \Rightarrow B)\]
+
+\subsubsection*{1.2}
+
+\begin{center}
+  \begin{tabular}{c c | c c c c | c | c}
+     \(A\) &
+     \(B\) &
+     \(A \vee B\) &
+     \(\neg A\) &
+     \(B \vee \neg A\) &
+     \((A \vee B) \Rightarrow (B \vee \neg A)\) & 
+     \(A \Rightarrow B\) & 
+     \((A \vee B) \Rightarrow (B \vee \neg A) \Leftrightarrow (A \Rightarrow B)\) \\
+     \hline
+     0 & 0 & 0 & 1 & 1 & 1 & 1 & 1 \\
+     0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+     1 & 0 & 1 & 0 & 0 & 0 & 0 & 1 \\
+     1 & 1 & 1 & 0 & 1 & 1 & 1 & 1
+  \end{tabular}
+\end{center}
+
+\subsubsection*{2.1}
+
+\[A \Rightarrow (A \vee (\neg B \wedge A)) \Leftrightarrow\]
+\[A \Rightarrow (A \vee (A \wedge \neg B)) \Leftrightarrow\]
+\[A \Rightarrow A \Leftrightarrow\]
+\[1\]
+
+\[A \Rightarrow (A \vee (\neg B \wedge A)) \Leftrightarrow 1\]
+
+\subsubsection*{2.2}
+
+\begin{center}
+  \begin{tabular}{c c | c c  c c| c | c}
+     \(A\) &
+     \(B\) &
+     \(\neg B\) &
+     \(\neg B \vee A\) &
+     \(A \vee (\neg B \vee A)\) &
+     \(A \Rightarrow (A \vee (\neg B \vee A))\) &
+     \(1\)&
+     \(A \Rightarrow (A \vee (\neg B \vee A)) \Leftrightarrow 1\) \\
+     \hline
+     0 & 0 & 1 & 0 & 0 & 1 & 1 & 1 \\
+     0 & 1 & 0 & 0 & 0 & 1 & 1 & 1 \\
+     1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 \\
+     1 & 1 & 0 & 0 & 1 & 1 & 1 & 1
+  \end{tabular}
+\end{center}
+
+\subsection*{Ответ}
+
+\begin{enumerate}
+  \item Высказывание
+  \((A \vee B) \Rightarrow (B \vee \neg A)\)
+  не является тавтологией, точнее
+  \((A \vee B) \Rightarrow (B \vee \neg A) \Leftrightarrow (A \Rightarrow B)\)
+  \item Высказывание
+  \(A \Rightarrow  (A \vee (\neg B \wedge A))\)
+  является тавтологией, то есть
+  \(A \Rightarrow  (A \vee (\neg B \wedge A)) \Leftrightarrow 1\)
+\end{enumerate}
+
+\subsection*{Файлы}
+
+\begin{itemize}
+  \item ./lesson\_2/task/problem\_3\_1.pdf
+  \item ./lesson\_2/task/problem\_3\_2.pdf
+\end{itemize}
